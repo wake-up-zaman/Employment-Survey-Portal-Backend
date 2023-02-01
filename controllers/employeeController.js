@@ -52,10 +52,10 @@ const Employee=require("../models/employee.js");
 
 
  const getAllEmployee=async (req,res,next)=>{
-    const Employee=req.query;
+    const sector=req.query;
     try{
-        const newEmployee=await Employee.find(Employee);
-        res.status(200).json(newEmployee);
+        const newSector=await Employee.find(sector);
+        res.status(200).json(newSector);
     }
     catch(err){
         next(err);
